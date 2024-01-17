@@ -5,11 +5,19 @@ import star from '../../Assets/filled-star.png'
 import emptyStar from '../../Assets/empty-star.png'
 import './index.scss'
 import Dropdown from "../../Components/Dropdown"
+import { Navigate } from 'react-router-dom'
+import Error from "../Error"
 
 function Logement() {
     const { id } = useParams()
-    const listing = logementList.find(logement => logement.id === id)
     const range = [1, 2, 3, 4, 5]
+    const listing = logementList.find(logement => logement.id === id)
+    
+    if (listing === undefined)
+        return (
+            <Navigate to="/Error" element={<Error />}/>
+    )
+
     return (
         <div>
             <Carousel pictures={listing.pictures} />

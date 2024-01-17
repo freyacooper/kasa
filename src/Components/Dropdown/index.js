@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import arrowClosed from '../../Assets/dropdown-closed.png'
 import arrowOpen from '../../Assets/dropdown-open.png'
 import './index.scss'
 
@@ -9,23 +8,25 @@ function Dropdown({content, header}) {
         <div className='dropdown'>
             <div className='dropdown-header'>
                 <h3>{header}</h3>
-                {isDropdownOpen ? (
-                    <img alt="" src={arrowOpen} onClick={() => setIsDropdownOpen(false)}/>
-                ) : (
-                    <img alt="" src={arrowClosed} onClick={() => setIsDropdownOpen(true)}/>
-                )}
+                <img 
+                    alt="" 
+                    src={arrowOpen} 
+                    onClick={() => setIsDropdownOpen(!isDropdownOpen)} 
+                    className={ isDropdownOpen ? 'rotate' : ''}/>
             </div>
-            {isDropdownOpen ? (
-                <div className='dropdown-content'>
+            <div className={ isDropdownOpen ? 'dropdown-content' : 'dropdown-content dropdown-closed'}>
+                    
                     {content instanceof Array ? (
-                        content.map((listElem) => (
+                        <ul>
+                        {content.map((listElem) => (
                         <li>{listElem}</li>
-                    ))
+                        ))}
+                        </ul>
                     ) : (
                         <p>{content}</p>
                     )}
-                </div>
-            ) : null}
+                    
+            </div>
         </div>
     )
 }

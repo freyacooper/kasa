@@ -13,17 +13,36 @@
         }
         img {
             object-fit: contain;
+            transform: rotate(0deg);
+            transition: transform 400ms ease;
+        }
+        .rotate {
+            transform: rotate(180deg);
+            transition: transform 400ms ease;
         }
     }
     &-content {
         background-color: $light-grey;
-        padding: 20px;
+        height: 70%;
+        overflow: hidden;
+        transition: all 300ms ease;
         p {
-            @include text ($weight: $light)
+            @include text ($weight: $light);
+            padding: 20px;
+        }
+        ul {
+            padding: 20px;
+            margin: 0;
         }
         li {
             list-style-type: none;
-            @include text ($weight: $light)
+            @include text ($weight: $light);
         }
     }
+}
+
+.dropdown-closed {
+    height: 0;
+    overflow: hidden;
+    transition: all 300ms ease;
 }
