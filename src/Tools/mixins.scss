@@ -1,0 +1,16 @@
+@import './variables.scss';
+
+@mixin text ($size: 18px, $weight: $regular, $color: $main-color, $margin: 0) {
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+    margin: $margin;
+}
+
+@mixin flex ($display: flex, $direction: row, $justify: flex-start, $gap: 10px, $align: stretch) {
+    display: $display;
+    flex-direction: $direction;
+    justify-content: $justify;
+    gap: $gap;
+    align-items: $align;
+}

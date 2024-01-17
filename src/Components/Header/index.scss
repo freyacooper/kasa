@@ -1,0 +1,22 @@
+@import "../../Tools/variables.scss";
+@import '../../Tools/mixins.scss';
+
+.header {
+    padding: 40px 100px;
+    @include flex ($justify: space-between, $align: center, $gap: 0);
+    img {
+        width: 180px;
+    }
+    div {
+        width: 250px;
+        display: flex;
+        justify-content: space-between;
+        a {
+            text-decoration: none;
+            @include text ($size: 24px);
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}

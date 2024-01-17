@@ -1,0 +1,19 @@
+@import "../../Tools/variables.scss";
+@import '../../Tools/mixins.scss';
+
+.footer {
+    background-color: $black;
+    padding: 60px 0 30px 0;
+    margin-top: auto;
+    @include flex ($direction: column, $justify: center, $gap: 30px);
+    p {
+        text-align: center;
+        @include text ($color: $white, $weight: $light)
+    }
+    img {
+        width: 100px;
+        filter: grayscale(100);
+        filter: brightness(100);
+        align-self: center;
+    }
+}

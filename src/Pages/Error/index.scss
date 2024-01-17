@@ -1,0 +1,17 @@
+@import '../../Tools/variables.scss';
+@import '../../Tools/mixins.scss';
+
+.error-box {
+    align-self: center;
+    @include flex ($direction: column, $justify: center, $align: center, $gap: 100px);
+    p {
+        @include text ($size: 36px);
+    }
+    .error-message {
+        @include text ($size: 250px, $weight: $bold)
+    }
+    a {
+        @include text
+    }
+    
+}

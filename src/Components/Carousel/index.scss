@@ -1,0 +1,29 @@
+@import '../../Tools/variables.scss';
+@import '../../Tools/mixins.scss';
+
+.carousel {
+    height: 410px;
+    margin: 0px 100px;
+    @include flex ($direction: column, $justify: center, $align: center, $gap: 0);
+    position: relative;
+    .arrows {
+        width: 100%;
+        @include flex ($justify: space-between, $gap: 0);
+        position: absolute;
+        img {
+            padding: 25px;
+        }
+    }
+    p {
+        position: absolute;
+        bottom: 0;
+        @include text ($color: $white, $margin: 25px)
+    }
+    &-photo {
+        object-fit: cover;
+        position: absolute;
+        width: 100%;
+        height: 410px;
+        border-radius: 25px;
+    }
+}

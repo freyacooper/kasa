@@ -1,0 +1,11 @@
+@import '../../Tools/variables.scss';
+@import '../../Tools/mixins.scss';
+
+.card-container {
+    background-color: $light-grey;
+    padding: 50px;
+    margin: 40px 100px 0 100px;
+    border-radius: 25px;
+    flex-wrap: wrap;
+    @include flex ($gap: 60px)
+}

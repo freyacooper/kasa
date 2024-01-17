@@ -1,0 +1,29 @@
+@import '../../Tools/variables.scss';
+@import '../../Tools/mixins.scss';
+
+.card {
+    min-width: 340px;
+    min-height: 340px;
+    position: relative;
+    &-title {
+        text-decoration: none;
+        position: absolute;
+        bottom: 0;
+        @include text ($margin: 18px, $color: $white)
+    }
+    img {
+        position: absolute;
+        object-fit: cover;
+        height: 340px;
+        width: 340px;
+        border-radius: 10px;
+    }
+    &-overlay {
+        min-width: 340px;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0.50) 100%);
+        border-radius: 10px;
+        min-height: 340px;
+        position: absolute;
+        border-radius: 10px;
+    }
+}

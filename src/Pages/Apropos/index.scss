@@ -1,0 +1,7 @@
+@import '../../Tools/variables.scss';
+@import '../../Tools/mixins.scss';
+
+.dropdown-container {
+    margin: 50px 200px;
+    @include flex ($direction: column, $gap: 30px);
+}
