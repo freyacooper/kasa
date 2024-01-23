@@ -1,4 +1,3 @@
-// import { Link } from 'react-router-dom'
 import { logementList } from '../../Data/logementList'
 import Banner from '../../Components/Banner/index'
 import bannerPhoto1 from '../../Assets/banner1.png';
@@ -11,11 +10,12 @@ function Home() {
   return (
     <div>
       <Banner bannerPhoto={bannerPhotoSrc} tagLine="Chez vous, partout et ailleurs" altTag="Une forêt au sommet d'une falaise au bord de la mer"/>
-      <div className='card-container'>
-      {logementList.map(({id, title, cover}) => (
-        <Card id={id} title={title} cover={cover}/>
-        // <Link to={`/logement/${id}`}> {title} </Link>
-      ))}
+      <div className='card-container-bg'>
+        <div className='card-container'>
+          {logementList.map(({id, title, cover}) => (
+            <Card id={id} title={title} cover={cover}/>
+          ))}
+        </div>
       </div>
     </div>
   );

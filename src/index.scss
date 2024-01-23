@@ -11,10 +11,7 @@ body {
       flex-direction: column;
       gap: 50px;
       min-height: 100vh;
+      max-width: 1600px;
+      margin: auto;
     }
 }
-
-// code {
-//   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-//     monospace;
-// }

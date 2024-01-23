@@ -19,4 +19,19 @@
             }
         }
     }
+    @media screen and (max-width: $mobile) {
+        padding: 20px;
+        img {
+            width: 115px;
+        }
+        div{
+            justify-content: flex-end;
+            gap: 15px;
+           a {
+            @include text ($size: 12px);
+            text-transform: uppercase;
+            } 
+        }
+        
+    }
 }

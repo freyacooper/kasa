@@ -2,9 +2,10 @@
 @import '../../Tools/mixins.scss';
 
 .card {
-    min-width: 340px;
-    min-height: 340px;
+    width: 340px;
+    height: 340px;
     position: relative;
+    margin-bottom: 13%;
     &-title {
         text-decoration: none;
         position: absolute;
@@ -25,5 +26,15 @@
         min-height: 340px;
         position: absolute;
         border-radius: 10px;
+    }
+    @media screen and (max-width: $mobile) {
+        width: 100%;
+        margin: 5px;
+        img {
+            width: 100%;
+        }
+        &-overlay {
+            min-width: 100%;
+        }
     }
 }

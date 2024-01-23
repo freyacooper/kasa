@@ -44,12 +44,11 @@ function Logement() {
                                 <span><img alt="" src={emptyStar}/></span>)
                         ))}
                     </div>
-                </div>
-                
+                </div> 
             </div>
             <div className="dropdown-cont">
-                    <Dropdown content={listing.description} header="Description"/>
-                    <Dropdown content={listing.equipments} header="Équipements"/>
+                <Dropdown content={listing.description} header="Description"/>
+                <Dropdown content={listing.equipments} header="Équipements"/>
             </div>
         </div>
     )

@@ -9,9 +9,7 @@ function Card({id, title, cover}) {
                 <div className='card-overlay'></div>
                 <p className='card-title'>{title}</p>
             </div>
-        </Link>
-        
+        </Link>  
     )
 }
-
 export default Card
