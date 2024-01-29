@@ -12,6 +12,18 @@
         flex-wrap: wrap;
         max-width: 1140px;
     }
+    @media screen and (max-width: $small-desktop) {
+        margin: 0 50px;
+    }
+    @media screen and (max-width: 900px) {
+        margin: 0 50px;
+        padding: 0;
+        background-color: $white;
+        .card-container {
+            @include flex ($direction: column, $justify: center, $gap: 0);
+            width: 100%;
+        }
+    }
     @media screen and (max-width: $mobile) {
         background-color: $white;
         margin: 0 20px;

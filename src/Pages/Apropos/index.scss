@@ -4,4 +4,11 @@
 .dropdown-container {
     margin: 50px 200px;
     @include flex ($direction: column, $gap: 30px);
+    @media screen and (max-width: $small-desktop) {
+        margin: 40px 100px;
+    }
+    @media screen and (max-width: $mobile) {
+        margin: 30px 20px;
+    }
+    
 }

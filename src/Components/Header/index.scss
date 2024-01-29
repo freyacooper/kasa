@@ -19,6 +19,9 @@
             }
         }
     }
+    @media screen and (max-width: $small-desktop) {
+        padding: 50px;
+    }
     @media screen and (max-width: $mobile) {
         padding: 20px;
         img {
@@ -26,12 +29,11 @@
         }
         div{
             justify-content: flex-end;
-            gap: 15px;
+            gap: 10%;
            a {
             @include text ($size: 12px);
             text-transform: uppercase;
             } 
-        }
-        
+        }  
     }
 }

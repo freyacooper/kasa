@@ -41,8 +41,38 @@
             @include flex ($gap: 15px)
         }
     }
+    @media screen and (max-width: $mobile) {
+        margin: 0 20px;
+        @include flex ($direction: column, $justify: space-between, $gap: 0);
+        .host-info {
+            @include flex ($direction: row-reverse, $justify: space-between, $align: flex-end, $gap: 0);
+            .host {
+                h2 {
+                    font-size: 12px;  
+                }
+                img {
+                    height: 32px;
+                    width: 32px;  
+                }
+            .rating {
+                height: 20px;
+                div {
+                    img {
+                       height: 20px; 
+                    }
+                    
+                }
+                
+            } 
+            }
+        }
+    }
 }
 .dropdown-cont {
     margin: 0 100px;
     @include flex ($justify: space-between, $gap: 70px);
+    @media screen and (max-width: $mobile) {
+        margin: 0 20px;
+        @include flex ($direction: column, $justify: space-between, $gap: 20px);
+    }
 }

@@ -39,9 +39,9 @@ function Logement() {
                     <div className="rating">
                         {range.map((rangeElem) => (
                             listing.rating >= rangeElem ? (
-                                <span><img alt="" src={star}/></span>
+                                <div><img alt="" src={star}/></div>
                             ) : (
-                                <span><img alt="" src={emptyStar}/></span>)
+                                <div><img alt="" src={emptyStar}/></div>)
                         ))}
                     </div>
                 </div> 

@@ -28,6 +28,17 @@
             @include text ($size: 48px, $color: $white)
         }
     }
+    @media screen and (max-width: $small-desktop) {
+        margin: 0 50px;
+        div {
+            top: 208px;
+            left: 50px;
+            right: 50px;
+            p {
+                @include text ($size: 30px, $color: $white)
+            }
+        }
+    }
     @media screen and (max-width: $mobile) {
         margin: 0 20px;
         height: 100px;
@@ -42,4 +53,5 @@
             }
         }
     }
+
 }
