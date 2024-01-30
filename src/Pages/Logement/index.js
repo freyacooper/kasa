@@ -26,8 +26,8 @@ function Logement() {
                     <h1>{listing.title}</h1>
                     <h2>{listing.location}</h2>
                     <div className="tags-container">
-                        {(listing.tags).map((tag) => (
-                            <div className="tags">{tag}</div>
+                        {(listing.tags).map((tag, index) => (
+                            <div className="tags" key={`${index} + tag + ${id}`}>{tag}</div>
                         ))}
                     </div>
                 </div>
@@ -37,11 +37,11 @@ function Logement() {
                         <img src={listing.host.picture} alt=""/>
                     </div>
                     <div className="rating">
-                        {range.map((rangeElem) => (
+                        {range.map((rangeElem, index) => (
                             listing.rating >= rangeElem ? (
-                                <div><img alt="" src={star}/></div>
+                                <div key={`${index} + star`}><img alt="" src={star}/></div>
                             ) : (
-                                <div><img alt="" src={emptyStar}/></div>)
+                                <div key={`${index} + emptystar`}><img alt="" src={emptyStar}/></div>)
                         ))}
                     </div>
                 </div> 

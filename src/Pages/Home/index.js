@@ -13,7 +13,7 @@ function Home() {
       <div className='card-container-bg'>
         <div className='card-container'>
           {logementList.map(({id, title, cover}) => (
-            <Card id={id} title={title} cover={cover}/>
+            <Card id={id} title={title} cover={cover} key={id}/>
           ))}
         </div>
       </div>

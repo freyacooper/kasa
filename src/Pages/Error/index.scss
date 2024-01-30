@@ -13,5 +13,32 @@
     a {
         @include text
     }
-    
+    @media screen and (max-width: $small-desktop) {
+        gap: 80px;
+        p {
+            font-size: 20px;
+            width: 80%;
+            text-align: center;
+        }
+        .error-message {
+            font-size: 150px;
+        }
+        a {
+            font-size: 16px;
+        }
+    }
+    @media screen and (max-width: $mobile) {
+        gap: 70px;
+        p {
+            font-size: 18px;
+            width: 75%;
+            text-align: center;
+        }
+        .error-message {
+            font-size: 100px;
+        }
+        a {
+            font-size: 14px;
+        }
+    }
 }

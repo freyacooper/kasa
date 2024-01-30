@@ -41,29 +41,79 @@
             @include flex ($gap: 15px)
         }
     }
-    @media screen and (max-width: $mobile) {
-        margin: 0 20px;
-        @include flex ($direction: column, $justify: space-between, $gap: 0);
+    @media screen and (max-width: $small-desktop) {
+        margin: 0 50px;
+        padding: 20px 0;
+        @include flex ($justify: space-between, $gap: 0);
+        .listing-info {
+            h1 {
+                font-size: 22px;
+            }
+            h2 {
+                font-size: 16px;
+            }
+            .tags {
+                width: 100px;
+                @include text ($size: 14px, $color: $white)
+            }
+        }
         .host-info {
-            @include flex ($direction: row-reverse, $justify: space-between, $align: flex-end, $gap: 0);
+            padding-top: 15px;
+            @include flex ($direction: column, $justify: space-between, $align: center, $gap: 0);
             .host {
                 h2 {
+                    width: min-content;
+                    font-size: 14px;  
+                }
+                img {
+                    height: 40px;
+                    width: 40px;  
+                }
+            }
+            .rating {
+                @include flex ($gap: 10px);
+                img{
+                   height: 18px; 
+                }
+                
+            }
+        }
+    }
+    @media screen and (max-width: $mobile) {
+        margin: 0 20px;
+        padding: 40px 0;
+        @include flex ($direction: column, $justify: space-between, $gap: 0);
+        .listing-info {
+            h1 {
+                font-size: 20px;
+            }
+            h2 {
+                font-size: 14px;
+            }
+            .tags {
+                width: 80px;
+                @include text ($size: 12px, $color: $white)
+            }
+        }
+        .host-info {
+            padding-top: 10px;
+            @include flex ($direction: row-reverse, $justify: space-between, $align: center, $gap: 0);
+            .host {
+                h2 {
+                    width: min-content;
                     font-size: 12px;  
                 }
                 img {
                     height: 32px;
                     width: 32px;  
                 }
+            }
             .rating {
-                height: 20px;
-                div {
-                    img {
-                       height: 20px; 
-                    }
-                    
+                @include flex ($gap: 10px);
+                img{
+                   height: 15px; 
                 }
                 
-            } 
             }
         }
     }
@@ -71,6 +121,10 @@
 .dropdown-cont {
     margin: 0 100px;
     @include flex ($justify: space-between, $gap: 70px);
+    @media screen and (max-width: $small-desktop) {
+        margin: 0 50px;
+        @include flex ($justify: space-between, $gap: 20px);
+    }
     @media screen and (max-width: $mobile) {
         margin: 0 20px;
         @include flex ($direction: column, $justify: space-between, $gap: 20px);

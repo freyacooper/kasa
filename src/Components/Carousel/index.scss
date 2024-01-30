@@ -27,6 +27,18 @@
         height: 410px;
         border-radius: 25px;
     }
+    @media screen and (max-width: $small-desktop) {
+        margin: 0 50px;
+        height: 280px;
+        &-photo {
+            border-radius: 10px;
+            height: 280px;
+        }
+        .arrows img {
+            height: 34px;
+            padding: 15px;
+        }
+    }
     @media screen and (max-width: $mobile) {
         margin: 0 20px;
         height: 250px;

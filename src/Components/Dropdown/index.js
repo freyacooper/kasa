@@ -18,8 +18,8 @@ function Dropdown({content, header}) {
                     
                     {content instanceof Array ? (
                         <ul>
-                        {content.map((listElem) => (
-                        <li>{listElem}</li>
+                        {content.map((listElem, index) => (
+                        <li key={`${index} + equipement`}>{listElem}</li>
                         ))}
                         </ul>
                     ) : (
